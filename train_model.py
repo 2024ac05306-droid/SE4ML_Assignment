@@ -6,7 +6,7 @@ from data_loader import load_data
 import joblib
 import os
 
-# Load dataset
+# Load dataset 
 df = load_data()
 
 # Features and target
