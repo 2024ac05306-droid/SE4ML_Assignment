@@ -1,0 +1,27 @@
+Chronic-Disease-Prediction/
+│
+├── data/
+│   └── diabetes.csv
+│
+├── services/
+│   ├── user_service.py
+│   ├── medical_records_service.py
+│   ├── appointment_service.py
+│   ├── health_monitoring_service.py
+│   ├── ml_prediction_service.py
+│   ├── recommendation_service.py
+│   └── notification_service.py
+│
+├── models/
+│   ├── train_model.py
+│   ├── evaluate_model.py
+│   └── diabetes_model.pkl
+│
+├── utils/
+│   └── data_loader.py
+│
+├── api_gateway.py
+├── requirements.txt
+├── README.md
+├── architecture.png
+└── Chronic_Disease_Prediction.ipynb
