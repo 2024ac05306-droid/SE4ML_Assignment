@@ -29,4 +29,3 @@ jobs:
     - name: Evaluate Model
       run: |
         python evaluate_model.py
-`
