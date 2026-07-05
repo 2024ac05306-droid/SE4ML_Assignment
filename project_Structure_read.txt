@@ -24,4 +24,3 @@ Chronic-Disease-Prediction/
 ├── requirements.txt
 ├── README.md
 ├── architecture.png
-└── Chronic_Disease_Prediction.ipynb
