@@ -1,13 +1,20 @@
 # SE4ML_Assignment
 
 
-chronic_disease_microservices/
-│
-├── user_service.py
-├── medical_records_service.py
-├── appointment_service.py
-├── health_monitoring_service.py
-├── ml_prediction_service.py
-├── recommendation_service.py
-├── notification_service.py
-└── api_gateway.py
+
+Project: Chronic Disease Prediction System
+
+Architecture:
+- Microservices Architecture
+- FastAPI-based services
+- ML Prediction Service
+- Recommendation Engine
+- Notification Service
+
+Dataset:
+- PIMA Indians Diabetes Dataset
+
+How to Run:
+pip install -r requirements.txt
+uvicorn api_gateway:app --reload
+
