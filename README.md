@@ -15,6 +15,8 @@ Dataset:
 - PIMA Indians Diabetes Dataset
 
 How to Run:
+
 pip install -r requirements.txt
+
 uvicorn api_gateway:app --reload
 
