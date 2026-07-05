@@ -33,7 +33,6 @@ model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
 os.makedirs("models", exist_ok=True)
-
 joblib.dump(model, "models/diabetes_model.pkl")
 
 print("Model trained successfully")
