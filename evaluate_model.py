@@ -1,31 +1,24 @@
 # evaluate_model.py
-from data_loader import load_data
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 import joblib
+from sklearn.metrics import accuracy_score, classification_report
 
-# Load dataset
-df = load_data()
+# Paths should match those used in train_model.py
+MODEL_PATH = "models/diabetes_model.pkl"
+TEST_DATA_PATH = "models/test_data.pkl"
 
-# Prepare features and target
-X = df.drop("Outcome", axis=1)
-y = df["Outcome"]
+def evaluate(model_path=MODEL_PATH, test_data_path=TEST_DATA_PATH):
+    # Load model
+    model = joblib.load(model_path)
 
-# Create train/test split
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42
-)
+    # Load test split saved by train_model.py
+    X_test, y_test = joblib.load(test_data_path)
 
-# Load trained model
-model = joblib.load("models/diabetes_model.pkl")
+    # Predict and evaluate
+    predictions = model.predict(X_test)
+    accuracy = accuracy_score(y_test, predictions)
+    print(f"Accuracy: {accuracy:.4f}")
+    print("\nClassification report:")
+    print(classification_report(y_test, predictions))
 
-# Predict
-predictions = model.predict(X_test)
-
-# Evaluate
-accuracy = accuracy_score(y_test, predictions)
-
-print(f"Accuracy: {accuracy:.4f}")
+if __name__ == "__main__":
+    evaluate()
