@@ -11,7 +11,7 @@ Chronic-Disease-Prediction/
 │   ├── ml_prediction_service.py
 │   ├── recommendation_service.py
 │   └── notification_service.py
-│
+│   └── api_gateway.py
 ├── models/
 │   ├── train_model.py
 │   ├── evaluate_model.py
@@ -20,7 +20,7 @@ Chronic-Disease-Prediction/
 ├── utils/
 │   └── data_loader.py
 │
-├── api_gateway.py
+├
 ├── requirements.txt
 ├── README.md
 ├── architecture.png
